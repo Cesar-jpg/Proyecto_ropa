@@ -1,8 +1,166 @@
-.nav-anuncio
-{
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rosario:wght@500&family=Tiro+Kannada&display=swap');
+
+.nav-anuncio {
     color: white;
     background-color: #405B48;
     padding: 1rem 0 1rem 0;
     margin: 0 0 0 0;
     font-size: 1.2rem;
+}
+
+.icono-proyecto {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 0 0;
+}
+
+/* .nav-iniSesion,.nav-carrito
+{
+    visibility: hidden;
+}  */
+.nav-iniSesion {
+    visibility: hidden;
+    display: none;
+}
+
+.img_panel {
+    width: 20.313rem;
+    height: 26.24rem;
+    margin: 0 0 0 -1rem;
+}
+
+.panel {
+    width: 800px;
+    margin: 6rem 0 0 15rem;
+    background: #DFDFDF;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+}
+
+.text_panel {
+    margin: 10rem 0 0 0;
+}
+
+.tiro_panel {
+    font-size: 3rem;
+}
+
+h2.catego {
+    font-size: 3rem;
+    margin: 4rem 0 0 0;
+
+}
+
+.cards {
+    padding: 5% 0 0 0;
+}
+
+.cards-img {
+    width: 20.313rem;
+    height: 26.24rem;
+    opacity: .7;
+}
+
+.body-cards {
+    z-index: 2;
+    position: relative;
+    bottom: 48%;
+    padding: 2%;
+    font-size: 2rem;
+    color: aliceblue;
+    background-color: rgba(128, 128, 128, 0.918);
+    text-decoration-line: none;
+}
+.info1
+{
+    position: relative;
+}
+.img_info {
+    width: 82rem;
+    height: 45rem;
+    margin: 0 0 3rem 0;
+}
+
+.txt_info {
+    left: 40%;
+    z-index: 2;
+    position: absolute;
+    bottom: 45%;
+    width: 40%;
+}
+
+.fira {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.tiro {
+    font-family: 'Tiro Kannada', serif;
+}
+
+.rosario {
+    font-family: 'Rosario', sans-serif;
+}
+
+
+@media (max-width: 992px) {
+
+    .index_sesion {
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav-iniSesion {
+        visibility: visible;
+        display: block;
+    }
+
+    .text_panel {
+        margin: 5rem 0 0 0;
+    }
+
+    .img_panel {
+        width: 210px;
+        height: 330px;
+        margin: 0 0 0 0;
+    }
+
+    .panel {
+        width: 500px;
+        margin: 6rem 0 0 15rem;
+        background: #DFDFDF;
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+        -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+        -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.26);
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .index_sesion {
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav-iniSesion {
+        visibility: visible;
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .index_sesion {
+        visibility: hidden;
+        display: none;
+    }
+
+    .nav-iniSesion {
+        visibility: visible;
+        display: block;
+    }
+
 }
