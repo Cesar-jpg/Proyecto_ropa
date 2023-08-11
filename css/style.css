@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rosario:wght@500&family=Tiro+Kannada&display=swap');
-
+ /* CSS PARA INDEX */
 .nav-anuncio {
     color: white;
     background-color: #405B48;
@@ -72,7 +72,7 @@ h2.catego {
     background-color: rgba(128, 128, 128, 0.918);
     text-decoration-line: none;
 }
-.info1
+.info1,.info2
 {
     position: relative;
 }
@@ -89,6 +89,41 @@ h2.catego {
     bottom: 45%;
     width: 40%;
 }
+ h2.h_info2
+ {
+    font-size: 2.3rem;
+    font-weight: bold;
+ }
+.img_info2
+{
+    width: 35rem;
+    height: 50rem;
+    margin: 0 0 3rem 0;
+}
+.txt_info2
+{
+    left: 25%;
+    width: 40%;
+    bottom: 60%;
+    z-index: 2;
+    position: absolute;
+}
+.btn_info2
+{
+    left: 32%;
+    position: absolute;
+}
+.footer
+{
+    background: #dcdcdc9a;
+}
+.footer_row
+{
+    margin: 2rem 0 0 0;
+}
+ul{
+    list-style-type: none;
+  }
 
 .fira {
     font-family: 'Fira Sans', sans-serif;
@@ -101,7 +136,6 @@ h2.catego {
 .rosario {
     font-family: 'Rosario', sans-serif;
 }
-
 
 @media (max-width: 992px) {
 
