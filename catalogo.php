@@ -1,17 +1,24 @@
-<!doctype html>
+<?php 
+    include 'conn.php';
+    $prod = $con->prepare("SELECT * FROM producto");
+    $prod ->execute();
+    $res = $prod->fetchAll(PDO::FETCH_ASSOC);
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inicio</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="nos_bg">
     <section>
         <div>
             <p class="text-center nav-anuncio">¿Quieres recibir el pedido a casa? ¡COTIZALO! <i
@@ -27,7 +34,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">¡TELA-compro!</a>
@@ -39,7 +46,7 @@
                                 <a class="nav-link disabled">Platica con nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Donaciones</a>
+                                <a class="nav-link" href="">Donaciones</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link nav-iniSesion" href="">Iniciar sesión</a>
@@ -65,64 +72,26 @@
         </div>
     </section>
     <section class="container">
-        <div class="row panel">
-            <div class="col">
-                <img class="img_panel" src="../img/pexels-konstantin-mishchenko-2010812.jpg" alt="">
-            </div>
-            <div class="col text_panel">
-                <span class="fira">Para todos</span>
-                <h2 class="tiro tiro_panel">BE YOUNG</h2>
-                <span class="fira">temporada otoño-invierno</span>
-            </div>
-        </div>
-        <center>
-            <h2 class="catego fira">Categorias</h2>
-        </center>
-        <div class="text-center">
-            <div class="row cards">
+        
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <?php foreach ($res as $row) {?>
                 <div class="col">
-                    <img class="cards-img" src="../img/pexels-waldemar-brandt-2129970.jpg">
-                    <a class=" body-cards rosario" href="#">PANTALONES</a>
+                    <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $row ['nombre'] ?></h5>
+                        <p class="card-text">Precio: <?php echo $row ['precio'] ?></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <img class="cards-img" src="../img/pexels-sam-lion-5709661.jpg">
-                    <a class=" body-cards rosario" href="#">TODO</a>
-                </div>
-                <div class="col">
-                    <img class="cards-img" src="../img/pexels-liza-summer-6347892.jpg">
-                    <a class=" body-cards rosario" href="#">PLAYERAS</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="info1">
-            <img class="img_info" src="../img/pexels-andreea-ch-1166644.jpg">
-            <div class="txt_info">
-                <h2 class="tiro"> <b>Ayudamos a todos</b></h2>
-                <blockquote class="rosario">Muchas gracias por elegirnos, de verdad, muchas gracias con tu visita estas
-                    apoyando el reciclaje de uno de los mayores contaminantes del mundo.</blockquote>
-                <h4 class="fira"><b>No todo es comercio</b></h4>
-                <blockquote class="rosario">Puedes apoyar donando prendas en buen estado que no necesites y nosotros la
-                    donaremos a casas albergue o personas que lo necesiten. Nada de los productos donados serán puestos
-                    a la venta.</blockquote>
-            </div>
-        </div>
-        <div class="info2">
-            <img class="img_info2" src="../img/pexels-dio-alif-utomo-1897886.jpg">
-            <div class="txt_info2">
-                <h2 class="tiro text-center h_info2"> Tú también puedes producir</h2>
-                <blockquote class="rosario text-break text-center">¿Te gusta diseñar tu ropa? tú puedes ser uno de
-                    nuestros jovenes talentos
-                    si te gustaria participar, puedes llenar nuestro formulario y nosotros nos pondremos en contacto
-                    contigo.
-                </blockquote>
-                <button class="btn btn-success btn-lg btn_info2">Quiero unirme</button>
+            <?php }?>
             </div>
 
-        </div>
-
+ 
+       
     </section>
-
+    
     <footer class="footer">
         <div class="row ml-4 ">
             <div class="col-1"></div>
@@ -155,12 +124,6 @@
 
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>

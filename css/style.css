@@ -113,9 +113,24 @@ h2.catego {
     left: 32%;
     position: absolute;
 }
+
+.imgTxtDon
+{
+    width: 100%;
+    border-radius: 2%;
+}
+.don_info
+{
+    width: 60%;
+    height: 30%;
+    padding: 3rem;
+    margin-top: 3rem;
+    background-color: rgba(156,189,210,60%);    
+}
 .footer
 {
     background: #dcdcdc9a;
+    margin-top: 4rem         ;
 }
 .footer_row
 {
@@ -136,6 +151,31 @@ ul{
 .rosario {
     font-family: 'Rosario', sans-serif;
 }
+
+/* CSS PARA PAGINA "NOSOTROS" */
+.nos_h1
+{
+    font-weight: bold;
+}
+.nos_h4
+{
+    font-weight: bold;
+}
+
+.nos_bg
+{
+    background-image: url("../img/pexels-dominika-roseclay-1877920.png");
+    background-repeat: no-repeat;
+    background-size: 40rem 60rem;
+}
+.nos_info
+{
+    width: 40%;
+    padding: 3rem;
+    margin-top: 3rem;
+    background-color: rgba(156,189,210,60%);    
+}
+/* FIN DE CSS */
 
 @media (max-width: 992px) {
 
