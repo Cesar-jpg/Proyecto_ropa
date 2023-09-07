@@ -129,8 +129,12 @@ h2.catego {
 }
 .footer
 {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%;
     background: #dcdcdc9a;
-    margin-top: 4rem         ;
+    margin-top: 4rem;
 }
 .footer_row
 {

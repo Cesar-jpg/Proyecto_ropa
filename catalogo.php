@@ -25,7 +25,7 @@
                     class="fa-brands fa-whatsapp" style="color: #36a74d;"></i></p>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <img class="icono-proyecto" src="../img/reciclar.png">
+                    <img class="icono-proyecto" src="img/reciclar.png">
                     <a class="navbar-brand" href="#">Segunda vuelta</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,15 +73,19 @@
     </section>
     <section class="container">
         
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
             <?php foreach ($res as $row) {?>
+                <?php 
+                $imagen = $row['img'];
+                $url = "img/" . $imagen;
+                ?>
                 <div class="col">
                     <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<?php echo $url;?>" class="card-img-top" alt="..." style="width: 15rem; height: 20rem;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row ['nombre'] ?></h5>
                         <p class="card-text">Precio: <?php echo $row ['precio'] ?></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Agregar a carrito</a>
                     </div>
                     </div>
                 </div>
